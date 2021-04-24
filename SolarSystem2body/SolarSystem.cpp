@@ -1,33 +1,17 @@
 
+#include "SystemSpec.h"
 
-/* 
-* First create a solar system where the star is in a fixed position and the planets onlly interact with the sun not each other
-* This will give analytic results for the equations of motion of the planets
-* Use astronomical units (AU) for distances, solar masses for the mass of stars
-* Use class inheritance for individual stars and planets based off a base star and a base planet class
-*/
+int main()
+{
+    int t{1};
 
+    Star star(std::string("Sun"), 1.989e30, 696'340.0, Position(0,0));
+    Planet planet(std::string("Earth"), 5.972e24, 696'340.0, Position(1,0), Velocity(1,1));
 
+    std::cout << star;
+    std::cout << planet;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    return 0;
+}
 
 
