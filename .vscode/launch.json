@@ -5,13 +5,13 @@
     "version": "0.2.0",
     "configurations": [
         { // For cpp debugging
-            "name": "g++.exe - Build and debug active file",
+            "name": "Debug project",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${fileDirname}\\${fileBasenameNoExtension}.exe",
+            "program": "${workspaceFolder}\\bin\\PROJECT.exe",
             "args": [],
             "stopAtEntry": false,
-            "cwd": "${fileDirname}",//"C:\\Program Files\\mingw-w64\\x86_64-8.1.0-posix-seh-rt_v6-rev0\\mingw64\\bin",
+            "cwd": "${workspaceFolder}\\bin",
             "environment": [],
             "externalConsole": false,
             "MIMode": "gdb",
@@ -23,15 +23,7 @@
                     "ignoreFailures": true
                 }
             ],
-            "preLaunchTask": "C/C++: g++.exe build active file"
+            "preLaunchTask": "Build"
         },
-
-        { // For python debugging
-            "name": "Python: Current File",
-            "type": "python",
-            "request": "launch",
-            "program": "${file}",
-            "console": "integratedTerminal"
-        }
     ]
 }
