@@ -10,7 +10,7 @@
                 "${workspaceFolder}\\include",
                 // "${workspaceFolder}\\src\\SolarSystem.cpp",
                 "${workspaceFolder}\\src\\gui\\win32_platform.cpp",
-                "${workspaceFolder}\\libs\\*",
+                "${workspaceFolder}\\libs\\*.a",
                 "-o",
                 "${workspaceFolder}\\bin\\win32_platform.exe",
                 "&&",
@@ -38,7 +38,7 @@
                 "-I",
                 "${workspaceFolder}\\include",
                 "${file}",
-                "${workspaceFolder}\\libs\\*",
+                "${workspaceFolder}\\libs\\*.a",
                 "-o",
                 "${fileDirname}\\${fileBasenameNoExtension}.exe"
             ],
