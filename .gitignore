@@ -1,3 +1,8 @@
+# Build files, libraries and binaries
+build
+lib/*
+bin/*
+
 # Prerequisites
 *.d
 
@@ -31,5 +36,3 @@
 *.out
 *.app
 
-# Python stuff
-.vscode/.ropeproject/objectdb

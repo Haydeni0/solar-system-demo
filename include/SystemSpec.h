@@ -3,12 +3,11 @@
 #define SYSTEMSPEC_H
 
 /* 
-* First create a solar system where a single star is in a fixed position and the planets only interact with the it not each other
-* This will give analytic results for the equations of motion of the planets
-* Use astronomical units (AU) for distances, solar masses for the mass of stars
-* Use class inheritance for individual stars and planets based off a base star and a base planet class
+* A solar system where a single star is in a fixed position and the planets only interact with the it not each other
+* Use units of m for distance and Kg for mass
+* Everything is in 2 dimensions
 
-* Do this in 2D as well for simplicity
+Probably move the definitions to a separate cpp file soon ish
 */
 
 #include <iostream>
@@ -74,7 +73,7 @@ public:
         // An overloaded output operator that works on all derived classes
         // Displays the type of astronomical object, its name, position and velocity.
         out << "[" << astr.getType() << "] " << astr.m_name << ": Mass(" << astr.getMass() << ")";
-        out << " Pos" << astr.getPos() << " Vel" << astr.getVel() << "\n";
+        out << " Pos[m]" << astr.getPos() << " Vel[m/s]" << astr.getVel() << "\n";
         return out;
     }
 };
