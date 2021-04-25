@@ -13,6 +13,7 @@ using a simplified model for gravity/interactions
 * The star always has zero velocity (fixed position)
 * Planets only interact with the star and no other objects
 * Astronomical objects (stars/planets) are considered point-objects and have no radius (though in the code they might, to no effect currently)
+* Newtonian gravity, no GR
 
 
 

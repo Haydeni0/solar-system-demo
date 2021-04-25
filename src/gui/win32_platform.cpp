@@ -85,7 +85,7 @@ int WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int n
         // Simulate
         render_background();
         clear_screen(0x00ffa0);
-        draw_rect(50, 50, 200, 500, 0xff0000);
+        draw_rect(0.5, 0.5, 0.2, 0.1, 0xff0000);
 
         // Render
         StretchDIBits(hdc, 0, 0, render_state.width, render_state.height, 0, 0, render_state.width, render_state.height, render_state.memory, &render_state.bitmap_info, DIB_RGB_COLORS, SRCCOPY);
