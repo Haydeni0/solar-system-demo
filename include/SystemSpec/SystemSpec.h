@@ -1,6 +1,6 @@
-#ifndef SYSTEMSPEC_H
+#ifndef SYSTEMSPEC_H_202104
 
-#define SYSTEMSPEC_H
+#define SYSTEMSPEC_H_202104
 
 /* 
 * A solar system where a single star is in a fixed position and the planets only interact with the it not each other

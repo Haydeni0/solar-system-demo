@@ -5,16 +5,9 @@ Based on tutorials: https://www.youtube.com/watch?v=yD0WzbKJcOg&ab_channel=DanZa
 Note that som
 */
 
-#include <string>
-#include <windows.h>
+#include "tools/utils.h"
+#include "gui/renderer.h"
 
-struct RenderState
-{
-    void *memory;
-    int width;
-    int height;
-    BITMAPINFO bitmap_info;
-};
 // GLOBALS
 bool running{true};
 RenderState render_state;
@@ -90,17 +83,14 @@ int WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int n
         }
 
         // Simulate
-        unsigned int *pixel{static_cast<unsigned int *>(render_state.memory)};
-        for (int y{0}; y < render_state.height; y++)
-        {
-            for (int x{0}; x < render_state.width; x++)
-            {
-                *pixel++ = x * y * y;
-            }
-        }
+        render_background();
+        clear_screen(0x00ffa0);
+        draw_rect(50, 50, 200, 500, 0xff0000);
 
         // Render
         StretchDIBits(hdc, 0, 0, render_state.width, render_state.height, 0, 0, render_state.width, render_state.height, render_state.memory, &render_state.bitmap_info, DIB_RGB_COLORS, SRCCOPY);
+        
+        
     }
 
     return 0;

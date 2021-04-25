@@ -1,6 +1,7 @@
 {
     "tasks": [
         {
+            // RUN
             "type": "cppbuild",
             "label": "Run",
             "command": "",
@@ -20,16 +21,25 @@
             ]
         },
         {
+            // BUILD
             "type": "cppbuild",
             "label": "Build",
             "command": "g++",
             "args": [
                 "-std=c++17",
+                // Show errors
+                "-Wall",
+                "-Wshadow",
+                "-Werror",
+                // Include
                 "-I",
-                "${workspaceFolder}\\include", // Include include
-                "${workspaceFolder}\\src\\gui\\*.cpp", // Compile and link every *.cpp in gui
-                "${workspaceFolder}\\libs\\*.a", // Link libraries
-                "-o", // Specify target path
+                "${workspaceFolder}\\include",
+                // Compile/link
+                "${workspaceFolder}\\src\\gui\\*.cpp", // Every *.cpp in gui
+                "${workspaceFolder}\\src\\tools\\*.cpp", // Every *.cpp in tools
+                "${workspaceFolder}\\libs\\*.a", // Libraries .a
+                // Specify target path
+                "-o",
                 "${workspaceFolder}\\bin\\PROJECT.exe"
             ],
             "problemMatcher": [
