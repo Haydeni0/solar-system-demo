@@ -30,7 +30,7 @@
                 // Show errors
                 "-Wall",
                 "-Wshadow",
-                "-Werror",
+                // "-Werror",
                 // Include
                 "-I",
                 "${workspaceFolder}\\include",

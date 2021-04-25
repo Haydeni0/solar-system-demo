@@ -1,6 +1,6 @@
 
+
 #include "gui/renderer.h"
-#include "tools/utils.h"
 
 // Forward declarations of global variables
 extern bool running;
