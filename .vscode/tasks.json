@@ -15,7 +15,7 @@
                 "isDefault": true
             },
             "detail": "Run the project.",
-            "dependsOn": [
+            "dependsOn": [ // Build before running
                 "Build"
             ]
         },
@@ -26,8 +26,8 @@
             "args": [
                 "-std=c++17",
                 "-I",
-                "${workspaceFolder}\\include", // Include everything in the include directory
-                "${workspaceFolder}\\src\\gui\\*.cpp", // Compile every *.cpp in gui
+                "${workspaceFolder}\\include", // Include include
+                "${workspaceFolder}\\src\\gui\\*.cpp", // Compile and link every *.cpp in gui
                 "${workspaceFolder}\\libs\\*.a", // Link libraries
                 "-o", // Specify target path
                 "${workspaceFolder}\\bin\\PROJECT.exe"
