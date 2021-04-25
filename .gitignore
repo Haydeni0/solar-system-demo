@@ -1,6 +1,5 @@
 # Build files, libraries and binaries
 build
-lib/*
 bin/*
 
 # Prerequisites
